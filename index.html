@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tea House</title>
+    <title>Geomatry Genius</title>
     <!-- Add Tailwind & DaisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -39,18 +39,172 @@
 
 </head>
 
-<body>
+<body class="md:container md:mx-auto">
     <header>
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a>Item 1</a></li>
+                        <li>
+                            <a>Parent</a>
+                            <ul class="p-2">
+                                <li><a>Submenu 1</a></li>
+                                <li><a>Submenu 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Item 3</a></li>
+                    </ul>
+                </div>
+                <a class="text-xl font-bold">Interactive <br> <span>Geomatry Genius</span></a>
+            </div>
+
+            <div class="navbar-end">
+                <a class="btn">Blog</a>
+            </div>
+        </div>
     </header>
     <main>
-        <p>Istiak javed</p>
-        <p>Istiak javed</p>
-        <p>Istiak javed</p>
-        <p>Istiak javed</p>
+        <div class="flex flex-col md:flex-row gap-3">
+            <div class="grid grid-cols-1 md:grid-cols-3 md:gap-3">
+
+                <!-- Traingle -->
+                <div class="card bg-base-100 hover:bg-sky-100 shadow-xl p-5 flex justify-between">
+
+                    <figure><img src="./images/triangle.png" alt="triangle" /></figure>
+
+                    <div class="text-center space-y-4 mt-4">
+                        <h2 class="text-lg font-bold text-center">Triangle</h2>
+                        <p class="text-center">Area (A) = 0.5 * b * h</p>
+                        <p>
+                            <input type="number" class="border bg-slate-100 w-12 px-1" id="base" placeholder="b"> <span
+                                class="text-slate-500 pr-5">cm
+                                <sup>2</sup></span>
+                            <input type="number" class="border bg-slate-100 w-12 px-1" id="height" placeholder="h">
+                            <span class="text-slate-500">cm <sup>2</sup></span>
+                        </p>
+                        <p class="font-semibold">Area is : <span id="traingle_area"></span></p>
+
+                        <button class="text-slate-50 px-8 py-4 rounded-md bg-green-500 "
+                            id="triangle_click">Calculator</button>
+                    </div>
+                </div>
+                <!-- Rectaingle -->
+                <div class="card bg-base-100 hover:bg-sky-100 shadow-xl p-5 flex justify-between">
+
+                    <figure class="py-5"><img src="./images/rectangle.png" alt="triangle" /></figure>
+
+                    <div class="text-center space-y-4">
+                        <h2 class="text-lg font-bold text-center">Rectaingle</h2>
+                        <p class="text-center">Area (A) = w * l </p>
+                        <p><input type="number" class="border bg-slate-100 w-12 px-1" placeholder="w" id="wide">
+                            <span class="text-slate-500 pr-5">cm
+                                <sup>2</sup></span>
+                            <input type="number" class="border bg-slate-100 w-12 px-1" placeholder="l" id="length">
+                            <span class="text-slate-500">cm <sup>2</sup></span>
+                        </p>
+                        <p class="font-semibold">Area is : <span id="rectaingle_area"></span></p>
+                        <button class="text-slate-50 px-8 py-4 rounded-md bg-green-500 "
+                            id="rectaingleArea">Calculator</button>
+                    </div>
+                </div>
+
+                <!-- Parallelogram -->
+                <div class="card bg-base-100 hover:bg-sky-100 shadow-xl p-5 flex justify-between">
+
+                    <figure class="py-5"><img src="./images/parallelogram.png" alt="triangle" /></figure>
+
+                    <div class="text-center space-y-4">
+                        <h2 class="text-lg font-bold text-center">Parallelogram</h2>
+                        <p class="text-center">Area (A) = w * l </p>
+                        <p>
+                            <input type="number" class="border bg-slate-100 w-12 px-1" placeholder="w" id="wide_p">
+                            <span class="text-slate-500 pr-5">cm
+                                <sup>2</sup></span>
+                            <input type="number" class="border bg-slate-100 w-12 px-1" placeholder="l" id="length_p">
+                            <span class="text-slate-500">cm <sup>2</sup></span>
+                        </p>
+                        <p class="font-semibold">Area is : <span id="parallelogram_area"></span></p>
+                        <button class="text-slate-50 px-8 py-4 rounded-md bg-green-500"
+                            id="parallelogramArea">Calculator</button>
+                    </div>
+                </div>
+
+                <!-- Rhombus -->
+                <div class="card bg-base-100 hover:bg-sky-100 shadow-xl p-5 flex justify-between">
+                    <figure><img src="./images/rhombus.png" alt="triangle" /></figure>
+                    <div class="text-center space-y-4 mt-4">
+                        <h2 class="text-lg font-bold text-center">Rhombus</h2>
+                        <p class="text-center">Area (A) = 0.5 * d1 * d2 </p>
+                        <p><input type="number" class="border bg-slate-100 w-12 px-1" placeholder="d1" id="d1"> <span
+                                class="text-slate-500 pr-5">cm
+                                <sup>2</sup></span>
+                            <input type="number" class="border bg-slate-100 w-12 px-1" placeholder="d2" id="d2"> <span
+                                class="text-slate-500">cm <sup>2</sup></span>
+                        </p>
+                        <p class="font-semibold">Area is : <span id="rhombus_area"></span></p>
+                        <button class="text-slate-50 px-8 py-4 rounded-md bg-green-500"
+                            id="rhombusArea">Calculator</button>
+                    </div>
+                </div>
+
+                <!-- Pentagon -->
+                <div class="card bg-base-100 hover:bg-sky-100 shadow-xl p-5 flex justify-between">
+                    <figure><img src="./images/pentagon.png" alt="triangle" /></figure>
+                    <div class="text-center space-y-4 mt-4">
+                        <h2 class="text-lg font-bold text-center">Pentagon</h2>
+                        <p class="text-center">Area (A) = 0.5 * p * b </p>
+                        <p><input type="number" class="border bg-slate-100 w-12 px-1" placeholder="p" id="p"> <span
+                                class="text-slate-500 pr-5">cm
+                                <sup>2</sup></span>
+                            <input type="number" class="border bg-slate-100 w-12 px-1" placeholder="b" id="b"> <span
+                                class="text-slate-500">cm <sup>2</sup></span>
+                        </p>
+                        <p class="font-semibold">Area is : <span id="pentagon_area"></span></p>
+                        <button class="text-slate-50 px-8 py-4 rounded-md bg-green-500"
+                            id="pentagonArea">Calculator</button>
+                    </div>
+                </div>
+
+                <!-- Ellipse -->
+                <div class="card bg-base-100 hover:bg-sky-100 shadow-xl p-5 flex justify-between">
+                    <figure><img src="./images/ellipse.png" alt="triangle" /></figure>
+                    <div class="text-center space-y-4 mt-4">
+                        <h2 class="text-lg font-bold text-center">Ellipse</h2>
+                        <p class="text-center">Area (A) = π * a * b </p>
+                        <p><input type="number" class="border bg-slate-100 w-12 px-1" placeholder="a" id="a"> <span
+                                class="text-slate-500 pr-5">cm
+                                <sup>2</sup></span>
+                            <input type="number" class="border bg-slate-100 w-12 px-1" placeholder="b" id="b_e"> <span
+                                class="text-slate-500">cm <sup>2</sup></span>
+                        </p>
+                        <p class="font-semibold">Area is : <span id="ellipse_area"></span></p>
+                        <button class="text-slate-50 px-8 py-4 rounded-md bg-green-500"
+                            id="ellipseArea">Calculator</button>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="  border-2 text-center pt-3 md:w-72">
+                <p class="font-semibold	underline">Area calculation</p>
+            </div>
+
+        </div>
+
     </main>
     <footer>
     </footer>
-    <script src="./js/text.js"></script>
+    <script src="./js/utilities.js"></script>
+    <script src="./js/calculation.js"></script>
 </body>
 
 </html>
