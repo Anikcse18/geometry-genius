@@ -12,3 +12,12 @@ function setTextElementById(textId, newValue) {
 function heighttimeswidth(width, height) {
   return width * height;
 }
+
+function calculatioEntry(shapeName, areaVale) {
+  var calculationEntry = document.getElementById("calculationEntry");
+  var p = document.createElement("p");
+  var count = calculationEntry.childElementCount;
+
+  p.innerHTML = `${count + 1}. ${shapeName} ${areaVale} cm<sup>2<sup> `;
+  calculationEntry.appendChild(p);
+}

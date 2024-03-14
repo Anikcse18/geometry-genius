@@ -41,7 +41,7 @@
 
 <body class="md:container md:mx-auto">
     <header>
-        <div class="navbar bg-base-100">
+        <div class="navbar bg-base-100 bg-slate-400 rounded-md">
             <div class="navbar-start">
                 <div class="dropdown">
                     <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -91,7 +91,7 @@
                             <input type="number" class="border bg-slate-100 w-12 px-1" id="height" placeholder="h">
                             <span class="text-slate-500">cm <sup>2</sup></span>
                         </p>
-                        <p class="font-semibold">Area is : <span id="traingle_area"></span></p>
+                        <p class="font-semibold">Area is : <span id="traingle_area">0</span> cm<sup>2</sup> </p>
 
                         <button class="text-slate-50 px-8 py-4 rounded-md bg-green-500 "
                             id="triangle_click">Calculator</button>
@@ -111,7 +111,7 @@
                             <input type="number" class="border bg-slate-100 w-12 px-1" placeholder="l" id="length">
                             <span class="text-slate-500">cm <sup>2</sup></span>
                         </p>
-                        <p class="font-semibold">Area is : <span id="rectaingle_area"></span></p>
+                        <p class="font-semibold">Area is : <span id="rectaingle_area">0</span> cm<sup>2</sup></p>
                         <button class="text-slate-50 px-8 py-4 rounded-md bg-green-500 "
                             id="rectaingleArea">Calculator</button>
                     </div>
@@ -132,7 +132,7 @@
                             <input type="number" class="border bg-slate-100 w-12 px-1" placeholder="l" id="length_p">
                             <span class="text-slate-500">cm <sup>2</sup></span>
                         </p>
-                        <p class="font-semibold">Area is : <span id="parallelogram_area"></span></p>
+                        <p class="font-semibold">Area is : <span id="parallelogram_area">0</span> cm<sup>2</sup></p>
                         <button class="text-slate-50 px-8 py-4 rounded-md bg-green-500"
                             id="parallelogramArea">Calculator</button>
                     </div>
@@ -150,7 +150,7 @@
                             <input type="number" class="border bg-slate-100 w-12 px-1" placeholder="d2" id="d2"> <span
                                 class="text-slate-500">cm <sup>2</sup></span>
                         </p>
-                        <p class="font-semibold">Area is : <span id="rhombus_area"></span></p>
+                        <p class="font-semibold">Area is : <span id="rhombus_area">0</span> cm<sup>2</sup></p>
                         <button class="text-slate-50 px-8 py-4 rounded-md bg-green-500"
                             id="rhombusArea">Calculator</button>
                     </div>
@@ -168,7 +168,7 @@
                             <input type="number" class="border bg-slate-100 w-12 px-1" placeholder="b" id="b"> <span
                                 class="text-slate-500">cm <sup>2</sup></span>
                         </p>
-                        <p class="font-semibold">Area is : <span id="pentagon_area"></span></p>
+                        <p class="font-semibold">Area is : <span id="pentagon_area">0</span> cm<sup>2</sup></p>
                         <button class="text-slate-50 px-8 py-4 rounded-md bg-green-500"
                             id="pentagonArea">Calculator</button>
                     </div>
@@ -186,7 +186,7 @@
                             <input type="number" class="border bg-slate-100 w-12 px-1" placeholder="b" id="b_e"> <span
                                 class="text-slate-500">cm <sup>2</sup></span>
                         </p>
-                        <p class="font-semibold">Area is : <span id="ellipse_area"></span></p>
+                        <p class="font-semibold">Area is : <span id="ellipse_area">0</span> cm<sup>2</sup></p>
                         <button class="text-slate-50 px-8 py-4 rounded-md bg-green-500"
                             id="ellipseArea">Calculator</button>
                     </div>
@@ -194,8 +194,11 @@
 
 
             </div>
-            <div class="  border-2 text-center pt-3 md:w-72">
+            <div class="  border-2 text-center pt-3 md:w-96 ">
                 <p class="font-semibold	underline">Area calculation</p>
+                <div id="calculationEntry" class="mt-4">
+
+                </div>
             </div>
 
         </div>

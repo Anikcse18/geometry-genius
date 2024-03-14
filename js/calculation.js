@@ -6,6 +6,8 @@ document
     var height = getInputFieldValuebyId("height");
     var traingleAreaCalculation = 0.5 * heighttimeswidth(base, height);
     setTextElementById("traingle_area", traingleAreaCalculation);
+    // calculation log
+    calculatioEntry("Traingle", traingleAreaCalculation);
   });
 
 // Rectaingel
@@ -16,6 +18,9 @@ document
     var length = getInputFieldValuebyId("length");
     var rectaingelAreaCalculation = heighttimeswidth(wide, length);
     setTextElementById("rectaingle_area", rectaingelAreaCalculation);
+
+    // calculation log
+    calculatioEntry("Rectaingel", rectaingelAreaCalculation);
   });
 
 // Parallelogram
@@ -24,9 +29,11 @@ document
   .addEventListener("click", function () {
     var wide_p = getInputFieldValuebyId("wide_p");
     var length_p = getInputFieldValuebyId("length_p");
-    var parallelogramAreaCalculation = heighttimeswidth(wide_p * length_p);
+    var parallelogramAreaCalculation = heighttimeswidth(wide_p, length_p);
 
     setTextElementById("parallelogram_area", parallelogramAreaCalculation);
+    // calculation log
+    calculatioEntry("Parallelogram", parallelogramAreaCalculation);
   });
 
 //RhombousArea
@@ -36,6 +43,9 @@ document.getElementById("rhombusArea").addEventListener("click", function () {
   var rhombousAreaCalculation = 0.5 * heighttimeswidth(d1, d2);
 
   setTextElementById("rhombus_area", rhombousAreaCalculation);
+
+  // calculation log
+  calculatioEntry("Rhombous", rhombousAreaCalculation);
 });
 
 // Pentagone
@@ -46,13 +56,19 @@ document.getElementById("pentagonArea").addEventListener("click", function () {
   var pentagoneAreaCalculation = 0.5 * heighttimeswidth(p, b);
 
   setTextElementById("pentagon_area", pentagoneAreaCalculation);
+
+  // calculation log
+  calculatioEntry("Pentagone", pentagoneAreaCalculation);
 });
 
 //ellipse
 document.getElementById("ellipseArea").addEventListener("click", function () {
   var a = getInputFieldValuebyId("a");
   var b_e = getInputFieldValuebyId("b_e");
-  var ellipseAreaCalculation = 3.1416 * heighttimeswidth(a,b_e);
+  var ellipseAreaCalculation = 3.1416 * heighttimeswidth(a, b_e);
+  ellipseAreaCalculation = ellipseAreaCalculation.toFixed(2);
 
   setTextElementById("ellipse_area", ellipseAreaCalculation);
+  // calculation log
+  calculatioEntry("Ellipse", ellipseAreaCalculation);
 });
